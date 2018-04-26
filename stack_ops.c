@@ -114,14 +114,16 @@ void _pop(stack_t **stack, unsigned int line_num)
 void _swap(stack_t **stack, unsigned int line_num)
 {
 	int tmp;
+	stack_t *current;
 
+	current = *stack;
 	line_num = glob_str->line_no;
 	if (!stack || !*stack || !(*stack)->next)
 	{
 		printf("L%d: can't swap, stack empty\n", line_num);
 		exit(EXIT_FAILURE);
 	}
-	tmp = (*stack)->n;
-	(*stack)->n = (*stack)->next->n;
-	(*stack)->next->n = tmp;
+	tmp = current->n;
+	current->n = current->next->n;
+	current->next->n = tmp;
 }
