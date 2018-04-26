@@ -91,7 +91,7 @@ void _pop(stack_t **stack, unsigned int line_num)
 	line_num = glob_str->line_no;
 	if (!stack || !*stack)
 	{
-		printf("L%d: can't pop, stack empty\n", line_num);
+		printf("L%d: can't pop an empty stack\n", line_num);
 		exit(EXIT_FAILURE);
 	}
 	else if ((*stack)->next != NULL)
