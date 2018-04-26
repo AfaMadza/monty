@@ -120,7 +120,7 @@ void _swap(stack_t **stack, unsigned int line_num)
 	line_num = glob_str->line_no;
 	if (current == NULL || current->next == NULL)
 	{
-		printf("L%d: can't swap, stack can't swap, stack too short\n", line_num);
+		printf("L%d: can't swap, stack too short\n", line_num);
 		exit(EXIT_FAILURE);
 	}
 	tmp = current->n;
