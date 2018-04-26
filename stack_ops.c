@@ -11,6 +11,7 @@ void _push(stack_t **stack, unsigned int line_num)
 	stack_t *new = NULL;
 	char *num;
 
+	line_num = glob_str->line_no;
 	if (glob_str->input[1] == NULL)
 	{
 		printf("L%d: usage: push integer\n", line_num);
@@ -55,7 +56,8 @@ void _pall(stack_t **stack, unsigned int line_num)
 	current = *stack;
 	while (current)
 	{
-		printf("%d\n", current->n);
+		if (current != NULL)
+			printf("%d\n", current->n);
 		current = current->next;
 	}
 }
