@@ -13,7 +13,7 @@ void _add(stack_t **stack, unsigned int line_num)
 	line_num = glob_str->line_no;
 	if (!stack || !*stack || !(*stack)->next)
 	{
-		printf("L%d: can't can't add, stack too short\n", line_num);
+		printf("L%d: can't add, stack too short\n", line_num);
 		exit(EXIT_FAILURE);
 	}
 	total = (*stack)->n + (*stack)->next->n;
