@@ -118,7 +118,7 @@ void _swap(stack_t **stack, unsigned int line_num)
 
 	current = *stack;
 	line_num = glob_str->line_no;
-	if (!stack || !*stack || !(*stack)->next)
+	if (current == NULL || current->next == NULL)
 	{
 		printf("L%d: can't swap, stack empty\n", line_num);
 		exit(EXIT_FAILURE);
