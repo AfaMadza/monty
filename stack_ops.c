@@ -91,7 +91,7 @@ void _pop(stack_t **stack, unsigned int line_num)
 	line_num = glob_str->line_no;
 	if (!stack || !*stack)
 	{
-		printf("L%d: can't pint, stack empty\n", line_num);
+		printf("L%d: can't pop, stack empty\n", line_num);
 		exit(EXIT_FAILURE);
 	}
 	else if ((*stack)->next != NULL)
@@ -118,7 +118,7 @@ void _swap(stack_t **stack, unsigned int line_num)
 	line_num = glob_str->line_no;
 	if (!stack || !*stack || !(*stack)->next)
 	{
-		printf("L%d: can't pint, stack empty\n", line_num);
+		printf("L%d: can't swap, stack empty\n", line_num);
 		exit(EXIT_FAILURE);
 	}
 	tmp = (*stack)->n;
