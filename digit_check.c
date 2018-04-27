@@ -11,7 +11,7 @@ int digit_check(char *n)
 	int i;
 
 	for (i = 0; n[i] != '\0'; i++)
-		if (isdigit(n[i]) == 0)
+		if (n[i] != '-' && isdigit(n[i]) == 0)
 			return (0);
 
 	return (1);
