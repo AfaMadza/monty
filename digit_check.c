@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * are_digits - checks for non-digit values in a string
+ * digit_check - checks for non-digit values in a string
  * @n: number to bec inspected for non-digit values
  *
  * Return: TRUE or FALSE
