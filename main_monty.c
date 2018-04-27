@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 	make_glob_str();
 	glob_str->file_name = argv[1];
 	glob_str->file = fopen(glob_str->file_name, "r");
-	if(!glob_str->file)
+	if (!glob_str->file)
 	{
 		printf("Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
