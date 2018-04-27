@@ -1,8 +1,7 @@
 #include "monty.h"
 /**
- * find-op - function pointer to find desired operation based on input
- * @stack: double pointer to head of stack
- * @line_num: line number from file
+ * find_op - function pointer to find desired operation based on input
+ * @void: void
  * Return: desired function.
  */
 void (*find_op(void))(stack_t **stack, unsigned int line_num)
@@ -31,7 +30,7 @@ void (*find_op(void))(stack_t **stack, unsigned int line_num)
 	return (i->f);
 }
 /**
- * parse_line - parses line/getline into input global variable
+ * parse_args - parses line/getline into input global variable
  * @line: input line
  *
  * Return: void
